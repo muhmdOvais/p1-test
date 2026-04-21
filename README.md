@@ -42,7 +42,7 @@ git add .
 git commit -m "Initial commit"
 
 git branch -M main
-git remote add origin <your-repo-url>
+git remote add origin <your-git-repo-url>
 git push -u origin main
 ```
 
@@ -51,6 +51,10 @@ git push -u origin main
 🔹 Step 3: Create dev branch
 
 ```bash
+git branch dev
+OR
+git switch -c dev # Directly creates and switches to that branch.
+OR
 git checkout -b dev
 ```
 
@@ -61,6 +65,10 @@ git checkout -b dev
 Edit files:
 
 ```html
+vi index.html
+OR
+nano index.html
+
 <!-- index.html -->
 <h1>Dev Branch</h1>
 ```
@@ -81,8 +89,8 @@ git push origin dev
 🔹 Step 5: Create test branch from main
 
 ```bash
-git checkout main
-git checkout -b test
+git switch main
+git switch -c test
 ```
 
 ---
@@ -110,7 +118,7 @@ git push origin test
 🔹 Step 7: Update main branch
 
 ```bash
-git checkout main
+git switch main
 ```
 
 (Optional edit any file)
